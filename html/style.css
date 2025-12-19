@@ -1,0 +1,41 @@
+.flex-container
+{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.grid-container
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.css-variable
+{
+    color: var(--main-text-color, blue);
+}
+.responsive-text
+{
+    color:black
+}
+@media (max-width: 768px) {
+    .responsive-text {
+        color: red;
+    }
+}
+:root
+{
+    --main-bg-color: #4CAF50;
+    --secondary-bg-color: #fff;
+}
+.transition-box
+{
+    width: 200px;
+    height: 100px;
+    background-color: var(--main-bg-color);
+    transition: background-color 0.8s ease;
+}
+.transition-box:hover
+{
+    background-color: var(--secondary-bg-color);
+}

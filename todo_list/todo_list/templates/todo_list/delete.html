@@ -1,0 +1,10 @@
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <h2>Delete Guest No. {{object.id}}</h2>
+    <p>Are you sure you want to delete this guest? </p>
+    {{ form }}
+    <input type="submit" value="Confirm Delete" class="btn btn-danger">
+    <a href="{% url 'todo_list:list' %}">Cancel</a>
+</form>
+{% endblock %}

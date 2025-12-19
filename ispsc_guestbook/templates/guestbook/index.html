@@ -1,0 +1,25 @@
+{% extends "guestbook/base.html" %}
+
+{% block content %}
+    <table  border="1px dashed">
+    {% for obj in entries %}
+    <tr><td width="200px">
+        <table>
+            <tr>
+                <td>
+                    <em>By {{ obj.name }}</em><br/>
+                    {{obj.datetime_created | date:"Y-m-d H:i"}}
+                    <br /> <em><a href={% url 'guestbook:update' obj.id %}>Edit</a></em>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{ obj.message }}
+                </td>
+            </tr>
+        </table>
+    </td></tr>
+    <tr><td></td></tr>
+    {% endfor %}
+    </table>
+{% endblock %}

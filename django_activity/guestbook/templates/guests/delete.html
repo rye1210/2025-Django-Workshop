@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if object %}
+        <form method="POST">
+            {% csrf_token %}
+            <h2>Delete Guest No. {{object.id}}</h2>
+            <p>Are you sure you want to delete the record of {{object.name}}? </p>
+            {{form}}
+            <input type="submit" value="Confirm Delete" class="btn btn-danger">
+            <a href="{% url 'guestbook:list' %}" class="btn btn-secondary">Cancel</a>
+        </form>
+    {% else %}
+        <div class="alert alert-warning" role="alert">
+            <h4 class="alert-heading">Guest Not Found</h4>
+            <p>The guest you are trying to delete does not exist.</p>
+            <hr>
+            <a href="{% url 'guestbook:list' %}" class="btn btn-primary">Return to Guestbook</a>
+        </div>
+    {% endif %}
+{% endblock %}

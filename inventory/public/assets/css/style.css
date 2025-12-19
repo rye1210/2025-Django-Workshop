@@ -1,0 +1,115 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url('../img/bg.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.heading {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+.card-button {
+    width: clamp(120px, 20vw, 200px);
+    aspect-ratio: 1 / 1;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    border: none;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+    font-size: clamp(0.9rem, 1.2vw, 1rem);
+    font-weight: 500;
+    color: #000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.card-button:hover {
+    transform: scale(1.25);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+}
+
+.card-button img {
+    width: 50%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 400px) {
+    .card-button {
+        width: 40vw;
+    }
+
+    .heading {
+        font-size: 1.5rem;
+    }
+}
+.content-container {
+    width: 85%;
+    max-width: 1400px;
+    margin: auto;
+    margin-top: 120px; 
+}
+
+.modern-card {
+    border-radius: 15px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+table thead th {
+    background: #0d6efd !important;
+    color: white !important;
+    font-size: 1rem;
+}
+
+table tbody tr:hover {
+    background-color: rgba(13, 110, 253, 0.1);
+}
+
+.floating-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.floating-btn i {
+    font-size: 2rem;
+}
+.floating-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 2000;
+}
+.content-container {
+    margin-top: 90px;
+}
+

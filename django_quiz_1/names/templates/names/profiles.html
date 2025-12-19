@@ -1,0 +1,21 @@
+<title>Raffle System - Profile -{{person}}</title>
+
+<body>
+    <table>
+        </tr>
+            <td>First Name:</td>
+            <td>{{ person.first_name }}</td>
+        </tr>
+        <tr>
+            <td>Middle Name:</td>
+            <td>{{ person.middle_name |default:"N/A"}}</td>
+        <tr></tr>
+            <td>{{ person.middle_name |default_if_none:"No Data"}}</td>
+        </tr>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td>{{ person.last_name }}</td>
+        </tr>
+    </table>
+</body>
